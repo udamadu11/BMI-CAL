@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form{
+                width: 500px;
+                height: 200px;
+                margin-top: 250px;
+                margin-left: 600px;
+                color: whitesmoke;
+                background: rgba(20,20,99,0.5);
+                text-align: center;
+            }
+            body{
+                background: url(avocado.jpg);
+                background-size: cover;
+                
+            }
+            h1{
+                background-color: maroon;
+                text-align: center;
+                
+            }
+            h2{
+                color: black;
+            }
+            p{
+                font-size: 20px;
+                width: 500px;
+                height: 200px;
+                margin-top: 100x;
+                margin-left: 600px;
+                color: white;
+                background-color: maroon;
+    
+            }
+        
+        </style>
+        
+    
+    </head>
+    <body>
+        <h1>BODY MASS INDEX</h1>
+    <form name="BMI">
+        <h2>BMI Calculator</h2>
+        Height : <input type="text" id="height">M<br>
+        Weight : <input type="text" id="weight">KG<br>
+        <input type="button" value="Submit" onclick="calculateBmi();">
+        <input type="reset" name="reset" value="reset">
+    </form>
+        <p>BMI compares your weight to your height, and is calculated by dividing your weight (in kilograms) by your height (in metres squared). It gives you an idea of whether you're underweight', a 'healthy' weight, 'overweight', or 'obese' for your height. BMI is one type of tool to help health professionals assess the risk for chronic disease. </p>
+        
+    <script>
+        function calculateBmi(){
+            console.log("BMI");
+         var height= Number(document.getElementById("height").value);   
+         var weight= Number(document.getElementById("weight").value);   
+            if(height>0 && weight>0){
+                var bmi = weight/(height*height);
+                if(bmi<16){
+                   alert("Very severely underweight");
+                }
+                if(bmi>16 && bmi<18.5){
+                   alert("Underweight");
+                }
+                if( bmi>18.5 && bmi<25){
+                   alert("Normal Weight");
+                }
+                if(bmi>25 && bmi<30){
+                    alert("Over Weight");
+                }
+                if(bmi>30){
+                    alert("Obease");
+                }
+            }
+            
+            
+            
+            
+        }  
+        </script>
+    
+    
+    </body>
+</html>
+
